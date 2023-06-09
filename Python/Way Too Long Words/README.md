@@ -1,4 +1,3 @@
-'''
 Sometimes some words like "localization" or "internationalization" are so long that writing them many times in one text is quite tiresome.
 
 Let's consider a word too long, if its length is strictly more than 10 characters. All too long words should be replaced with a special abbreviation.
@@ -9,25 +8,28 @@ Thus, "localization" will be spelt as "l10n", and "internationalization» will b
 
 You are suggested to automatize the process of changing the words with abbreviations. At that all too long words should be replaced by the abbreviation and the words that are not too long should not undergo any changes.
 
+Input
+The first line contains an integer n (1 ≤ n ≤ 100). Each of the following n lines contains one word. All the words consist of lowercase Latin letters and possess the lengths of from 1 to 100 characters.
 
-'''
-word = []
-
-N = input("")
-N = int(N)
-for i in range(0, N):
-    word += [input("")]
-
-
-#--------------------------------
-for i in range(0, N):
-    L = len(word[i])
-    if not (L > 10):
-        print(word[i])
-    else:
-        newWord = word[i][0] + str(L - 2) + word[i][L - 1]
-        print(newWord)
+Output
+Print n lines. The i-th line should contain the result of replacing of the i-th word from the input data.
 
 
 
+Examples
+user will input: 
+```
+4
+word
+localization
+internationalization
+pneumonoultramicroscopicsilicovolcanoconiosis
+```
 
+console will output: 
+```
+word
+l10n
+i18n
+p43s
+```
